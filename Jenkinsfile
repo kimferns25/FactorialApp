@@ -20,13 +20,7 @@ pipeline {
         success {
             emailext (
                 subject: "SUCCESS: Build Completed",
-                body: """Build Successful!
-
-Java Program Output:
-
-${currentBuild.rawBuild.getLog(100)}
-
-""",
+                body: "Your Jenkins pipeline build was successful.",
                 to: "2025.kim.fernandes@ves.ac.in"
             )
         }
